@@ -1,31 +1,46 @@
 <script>
-  import Navigation from "./navigation.svelte";
-  import { access_token, username, is_login } from "../lib/store";
+    import { push } from 'svelte-spa-router'
 
-  import logo from "../img/logo.svg";
-  import dropdown from "../img/select.svg";
+    import Modal from "./passwordReset.svelte";
+    import Navigation from "./navigation.svelte";
+    import { access_token, username, is_login } from "../lib/store";
 
-  let isOpen = false;
+    import logo from "../img/logo.svg";
+    import dropdown from "../img/select.svg";
 
-  function toggleDropdown(event) {
-    isOpen = !isOpen;
-  }
-
-  function handleClickOutside(event) {
-    if(!event.target.closest('.dropdown')) {
-        isOpen = false;
+    let showModal = false;
+    let isOpen = false;
+    
+    function logout(event) {
+        $access_token = ''
+        $username = ''
+        $is_login = false
+        push("/")
     }
-  }
 
-  function create(event) {
-    alert("시작하기 click..!");
-  }
+    function toggleDropdown(event) {
+        isOpen = !isOpen;
+    }
 
-  function menu(event) {
-    alert("AI menu");
-  }
+    function toggleModal(event) {
+        showModal = !showModal;
+    }
 
-  document.addEventListener('click', handleClickOutside);
+    function handleClickOutside(event) {
+        if(!event.target.closest('.dropdown')) {
+            isOpen = false;
+        }
+    }
+
+    function create(event) {
+        alert("시작하기 click..!");
+    }
+
+    function menu(event) {
+        alert("AI menu");
+    }
+
+    document.addEventListener('click', handleClickOutside);
 </script>
 
 <div id="wrap">
@@ -59,15 +74,15 @@
             {#if isOpen}
                 <div class="dropdown mt-4">
                     <ul class="dropdown-menu show">
-                        <li><button class="btn user-btn">LOG OUT</button></li>
-                        <li><button class="btn user-btn">비밀번호 재설정</button></li>
+                        <li><button class="btn user-btn" on:click={logout}>LOG OUT</button></li>
+                        <li><button class="btn user-btn" on:click={toggleModal}>비밀번호 재설정</button></li>
                     </ul>
                 </div>
             {/if}
         </div>
     </header>
     <!-- //header -->
-
+    <Modal show={showModal} close={toggleModal} />
     <!-- sidebar -->
     <Navigation />
     <!-- //sidebar -->
