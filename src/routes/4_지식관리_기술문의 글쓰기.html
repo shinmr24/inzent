@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+<title>INZENT</title>
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<link rel="shortcut icon" href="img/inzent_logo.png">
+<link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+<nav>
+	<a href="#ct" class="skip sr-only sr-only-focusable">Go to content</a>
+</nav>
+<div id="wrap">
+	<!-- header -->
+	<header id="hd">
+		<div class="hd-brand">
+			<h1 class="logo text-hide"><a href=""><img src="img/logo.svg" alt="INZENT">INZENT</a></h1>
+			<button type="button" class="menu-toggler d-none d-lg-block"><i class="icon-hamburger-back"></i></button>
+			<button type="button" class="menu-toggler d-lg-none"><i class="icon-hamburger-back"></i></button>
+		</div>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item">홈</li>
+			<li class="breadcrumb-item active" aria-current="page">기술 문의</li>
+		</ul>
+		<div class="hd-side">
+			<a href="" class="icon-info" title="수신함"></a>
+			<span class="text-dark small">마일리지 10점</span>
+			
+			<a href="" class="icon-profile" title="마이페이지"></a>
+			<span id="popup-logout" class="text-dark small">홍길동<a class="icon-down" href="" ></a></span>
+		</div>
+	</header>
+	<!-- //header -->
+	<!-- sidebar -->
+	<nav id="sidebar" class="panel">
+		<div class="panel-content">
+			<ul id="gnb">
+				<li>
+                    <a class="menu-collapse-link collapsed" data-toggle="collapse"><i class="icon-std-code text-dark"></i>기술 문의</a>
+                    
+                    <a href="#menu-knowledge-management" class="menu-collapse-link collapsed" data-toggle="collapse"><i class="icon-result text-dark"></i>지식 관리<i class="icon-down text-dark"></i></a>
+                        <ul id="menu-knowledge-management" class="menu-collapse collapse" data-parent="#gnb">
+                            <li class="menu-item">
+                                <a href="" class="menu-link">지식 관리</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" class="menu-link">내가 문의한 질문</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" class="menu-link">내가 답변한 질문</a>
+                            </li>
+                        </ul>
+					<a class="menu-collapse-link collapsed" data-toggle="collapse"><i class="icon-arrange text-dark"></i>지식 자료실</a>
+					<a class="menu-collapse-link collapsed" data-toggle="collapse"><i class="icon-graph text-dark"></i>지식자산 통계</a>
+					<a class="menu-collapse-link collapsed" data-toggle="collapse"><i class="icon-alarm text-dark"></i>공지사항</a>
+					<a href="#menu-setting" class="menu-collapse-link collapsed" data-toggle="collapse"><i class="icon-set text-dark"></i>설정<i class="icon-down text-dark"></i></a>
+                        <ul id="menu-setting" class="menu-collapse collapse" data-parent="#gnb">
+                            <li class="menu-item">
+                                <a href="" class="menu-link">프로젝트</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" class="menu-link">사용자 권한</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="" class="menu-link">지식포인트</a>
+                            </li>
+                        </ul>
+                    <a class="menu-collapse-link collapsed" data-toggle="collapse"><i class="icon-user text-dark"></i>프로필 관리</a>
+				</li>
+			</ul>
+		</div>
+    </nav>
+    <!-- //sidebar -->
+
+
+	<div id="ct">
+        <section class="card">
+            <header class="card-header">
+                <h2 class="card-title"><span class="i-rounded bg-danger"><i class="icon-std-code"></i></span>기술문의</h2>
+                <div class="btn-container">
+                    <a href="" class="btn btn-m"><span class="hide">미리보기</span></a>
+                    <a href="" class="btn btn-primary"><span class="hide">삭제</span></a>
+                    <a href="" class="btn btn-primary"><span class="hide">수정</span></a>
+                </div>
+            </header>
+            <div class="ct-header">
+                <button type="button" class="btn-filter collapsed d-xl-none" data-toggle="collapse" data-target="#collapse-filter">검색 필터<i class="icon-down"></i></button>
+                <div id="collapse-filter" class="collapse collapse-filter">
+                    <div class="filter no-gutters no-btn">
+                        <div class="col" style="min-width: 75%;">
+                            <label class="form-control-label" data-toggle="modal" data-target="#">
+                                <b class="control-label">질문제목</b>
+                                <input type="text" class="form-control" placeholder="제목은 필수입력사항입니다." readonly>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="form-control-label" data-toggle="modal" data-target="#">
+                                <b class="control-label">프로젝트</b>
+                                <input type="text" class="form-control" placeholder="프로젝트명을 입력하세요" readonly>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter no-gutters no-btn">
+                        <div class="col">
+                            <label class="form-control-label" data-toggle="modal" data-target="#">
+                                <b class="control-label">솔루션명</b>
+                                <input type="text" class="form-control" placeholder="솔루션명을 입력하세요" readonly>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="form-control-label" data-toggle="modal" data-target="#">
+                                <b class="control-label">태그</b>
+                                <input type="text" class="form-control" placeholder="#02" readonly>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="form-control-label" data-toggle="modal" data-target="#">
+                                <b class="control-label">에러코드</b>
+                                <input type="text" class="form-control" placeholder="코드명" readonly>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="form-control-label" data-toggle="modal" data-target="#">
+                                <b class="control-label">예외종류</b>
+                                <input type="text" class="form-control" placeholder="예외1" readonly>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="ct-content">
+                <div class="sub-bar">
+                    <i class="icon-right text-danger"></i><p class="font-weight-bold">질문</p>
+                </div>
+                <textarea class="textarea-basic-md"></textarea>
+                <div class="sub-bar">
+                    <i class="icon-right text-danger"></i><p class="font-weight-bold">환경 및 상황</p>
+                </div>
+                <textarea class="textarea-basic-md"></textarea>
+                <div class="sub-bar">
+                    <i class="icon-right text-danger"></i><p class="font-weight-bold">오류 로그</p>
+                </div>
+                <textarea class="textarea-basic-md"></textarea>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- //wrap -->
+
+<!-- js -->
+<script src="vendor/jquery/jquery-3.3.1.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
