@@ -7,6 +7,7 @@
 
     import logo from "../img/logo.svg";
     import dropdown from "../img/select.svg";
+  import fastapi from '../lib/api';
 
     let showModal = false;
     let isOpen = false;
@@ -37,7 +38,7 @@
     }
 
     function menu(event) {
-        alert("AI menu");
+        alert('menu');
     }
 
     document.addEventListener('click', handleClickOutside);
@@ -74,15 +75,15 @@
             {#if isOpen}
                 <div class="dropdown mt-4">
                     <ul class="dropdown-menu show">
-                        <li><button class="btn user-btn" on:click={logout}>LOG OUT</button></li>
                         <li><button class="btn user-btn" on:click={toggleModal}>비밀번호 재설정</button></li>
+                        <li><button class="btn user-btn" on:click={logout}>LOG OUT</button></li>
                     </ul>
                 </div>
             {/if}
         </div>
     </header>
     <!-- //header -->
-    <Modal show={showModal} close={toggleModal} />
+    <Modal show={showModal} close={toggleModal}/>
     <!-- sidebar -->
     <Navigation />
     <!-- //sidebar -->

@@ -67,12 +67,12 @@
         <div></div>
       {/if}
 			<button type="submit" class="btn btn-block btn-danger btn-lg" on:click="{login}">로그인</button>
-			<div class="login-menu">
+			<!-- <div class="login-menu"> -->
 			    <!-- <a href="#modal_membership" class="btn-login" data-toggle="modal">회원가입</a> -->
           <!-- <span>|</span> -->
           <!-- svelte-ignore a11y-invalid-attribute -->
-          <a href="#" class="btn-login" on:click={pwdReset}>비밀번호 재설정</a>
-			</div>
+          <!-- <a href="#" class="btn-login" on:click={pwdReset}>비밀번호 재설정</a> -->
+			<!-- </div> -->
 		</form>
 		<p class="copy">&copy; 2020 IZENT. All rights reserved</p>
 	</div>
